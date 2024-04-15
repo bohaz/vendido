@@ -78,7 +78,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "can delete a product" do
-    assert_diference('Product.count', -1) do
+    assert_difference('Product.count', -1) do
     delete product_path(products(:ps4))
     end
 
