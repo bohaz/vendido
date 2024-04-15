@@ -5,7 +5,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path
     
     assert_response :success
-    assert_select ".product", "2"
+    assert_select '.product', 2
   end
 
   test "render a detailed product page" do
@@ -57,7 +57,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "allows to update a product" do
-    patch products_path(products(:ps4)), params: { 
+    patch product_path(products(:ps4)), params: { 
       product: {  
         price: 120
       } 
@@ -67,13 +67,14 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_equal flash[:notice], "Tu producto se ha actualizado correctamente"
   end
 
-  test "does not allow to update a product with an invalid field" do
-    patch products_path(products(:ps4)), params: { 
+  test "does not allows to update a product with an invalid field" do
+    patch product_path(products(:ps4)), params: { 
       product: {  
-        price: nill
+        price: "nill"
       } 
     }
 
     assert_response :unprocessable_entity
   end
+
 end
