@@ -24,7 +24,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_select "form" 
   end
 
-  test "allow to create a new product" do
+  test "allows to create a new product" do
     post products_path, params: { 
       product: { 
         title: "Xbox One", 
@@ -33,6 +33,18 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       } 
     }
 
-    assert_response :redirected_to product_path
+    assert_redirected_to products_path
+  end
+
+  test "does not allows to create a new product" do
+    post products_path, params: { 
+      product: { 
+        title: "", 
+        description: "Xbox One en buen estado", 
+        price: 200 
+      } 
+    }
+
+    assert_response :unprocessable_entity
   end
 end
