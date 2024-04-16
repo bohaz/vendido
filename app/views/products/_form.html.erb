@@ -1,5 +1,5 @@
 <%= form_with model: @product do |form| %>
-  <%= @product.errors.full_messages.each do |error| %>
+  <% @product.errors.full_messages.each do |error| %>
     <div>
       <%= error %>
     </div>
