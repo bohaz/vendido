@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-resources :products, path: '/'
+  resources :products, path: '/'
 end
