@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.includes(:photo_attachment).all
+    @products = Product.includes(:photo_attachment).all.order(created_at: :desc)
   end
 
   def show
@@ -42,6 +42,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:title, :description, :price, :photo)
+    params.require(:product).permit(:title, :description, :price, :photo, :category_id)
   end
 end  

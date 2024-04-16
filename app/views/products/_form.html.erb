@@ -1,5 +1,5 @@
 <%= form_with model: @product do |form| %>
-  <%= @product.errors.full_messages.each do |error| %>
+  <% @product.errors.full_messages.each do |error| %>
     <div>
       <%= error %>
     </div>
@@ -18,6 +18,11 @@
   <div>
     <%= form.label :price %><br>
     <%= form.number_field :price %>
+  </div>
+
+  <div>
+  <%= form.label :category_id %><br>
+  <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name %>
   </div>
 
   <div>
