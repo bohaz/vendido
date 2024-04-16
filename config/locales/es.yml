@@ -33,3 +33,19 @@ es:
       updated: 'Producto actualizado correctamente'
     destroy:
       destroyed: 'Producto eliminado correctamente'
+  categories:
+    Category:
+      edit: 'Editar'
+      delete: 'Eliminar'
+    index:
+      title: 'Categorías'
+    new:
+      title: 'Añadir Categoría'
+    edit:
+      title: 'Editar Categoría'
+    create:
+      created: 'Categoría creada correctamente'
+    update:
+      updated: 'Categoría actualizada correctamente'
+    destroy:
+      destroyed: 'Categoría eliminada correctamente'
