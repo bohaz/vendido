@@ -4,3 +4,5 @@ videogames:
   name: Videojuegos
 computers:
   name: Informática
+clothes:
+  name: Ropa
