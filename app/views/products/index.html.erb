@@ -3,14 +3,18 @@
     <h1><%= t('.title') %></h1>
 
     <%= form_with url: products_path, method: :get do |form| %>
+
         <%= form.text_field :query_text, placeholder: t('.query_text'),
         onChange: 'this.form.requestSubmit()', value: params[:query_text] %>
+
         <%= form.number_field :min_price, placeholder: t('.min_price'),
         onChange: 'this.form.requestSubmit()', value: params[:min_price] %>
+
         <%= form.number_field :max_price, placeholder: t('.max_price'),
         onChange: 'this.form.requestSubmit()', value: params[:max_price] %>
 
-        <%= form.select :order_by, options_for_select([['Recientes', 'newest'], ['Más caros', 'expensive'], ['Más baratos', 'cheapest']], params[:order_by]), {},
+        <%= form.select :order_by, options_for_select(Product::ORDER_BY.keys.map {}, params[:order_by]), { |
+        order| [t(".#{order}"),order] },
         { onChange: 'this.form.requestSubmit()' } %>
     <% end %> 
 
