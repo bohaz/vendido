@@ -27,6 +27,7 @@ es:
       title: 'Añadir Producto'
     index:
       title: 'Productos'  
+      all: 'Todos'
     create:
       created: 'Tu producto se ha creado correctamente'
     update:
