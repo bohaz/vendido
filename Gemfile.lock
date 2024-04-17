@@ -130,6 +130,9 @@ GEM
     nokogiri (1.16.2-x86_64-linux)
       racc (~> 1.4)
     pg (1.5.4)
+    pg_search (2.3.6)
+      activerecord (>= 5.2)
+      activesupport (>= 5.2)
     psych (5.1.2)
       stringio
     public_suffix (5.0.3)
@@ -220,6 +223,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   pg (~> 1.1)
+  pg_search (~> 2.3)
   puma (~> 5.0)
   rails (~> 7.0.8)
   selenium-webdriver
