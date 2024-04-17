@@ -30,6 +30,9 @@ en:
     index:
       title: 'Products'  
       all: 'All'
+      min_price: 'Min Price'
+      max_price: 'Max Price'
+      query_text: 'What product are you looking for?'
     create:
       created: 'Product created successfully'
     update:
