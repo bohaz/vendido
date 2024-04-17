@@ -1,4 +1,4 @@
-<%= turbo_frame_tag 'categories' do %>
+<%= turbo_frame_tag 'home' do %>
 
     <h1><%= t('.title') %></h1>
 
@@ -22,8 +22,22 @@
 
     <%= render partial: 'category', collection: @categories %>
 
-    <div class="products">
+    <%= turbo_frame_tag "products", class: 'products' do %>
         <%= render partial: 'product', collection: @products %>
-    </div>
-
+      
+        <div class="pagination-buttons">
+          <% if @pagy.prev %>
+            <%= link_to 'Previous', pagy_url_for(@pagy, @pagy.prev), 
+                  data: { turbo_frame: "products" }, 
+                  class: 'previous-button' %>
+          <% end %>
+      
+          <% if @pagy.next %>
+            <%= link_to 'Next', pagy_url_for(@pagy, @pagy.next), 
+                  data: { turbo_frame: "products" }, 
+                  class: 'next-button' %>
+          <% end %>
+        </div>
+    <% end %>
+      
 <% end %>
