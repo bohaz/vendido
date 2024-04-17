@@ -28,6 +28,9 @@ es:
     index:
       title: 'Productos'  
       all: 'Todos'
+      min_price: 'Precio Mínimo'
+      max_price: 'Precio Máximo'
+      query_text: 'Qué producto buscas?'
     create:
       created: 'Tu producto se ha creado correctamente'
     update:
