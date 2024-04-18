@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   around_action :switch_locale
   before_action :set_current_user
+  before_action :protect_pages
   
 
   def switch_locale(&action)
@@ -17,5 +18,9 @@ class ApplicationController < ActionController::Base
 
   def set_current_user
     Current.user = User.find_by(id: session[:user_id]) if session[:user_id]
+  end
+
+  def protect_pages
+    redirect_to new_sessions_path unless Current.user
   end
 end
