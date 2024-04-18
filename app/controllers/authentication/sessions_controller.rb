@@ -12,5 +12,6 @@ class Authentication::SessionsController < ApplicationController
     else
       redirect_to new_sessions_path, alert: t('.failed')
     end
+  end
 
   end
