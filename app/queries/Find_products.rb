@@ -8,6 +8,7 @@ class FindProducts
   scoped = products
   scoped = filter_by_category(scoped, params[:category_id])
   scoped = filter_by_min_price(scoped, params[:min_price])
+  scoped = filter_by_max_price(scoped, params[:max_price])
   end
 
   private
@@ -26,6 +27,12 @@ class FindProducts
     return scoped unless min_price
   
     scoped.where("price >= ?", params[:min_price])
+  end
+
+  def filter_by_max_price(scoped, max_price)
+    return scoped unless max_price
+  
+    scoped.where("price <= ?", params[:max_price])
   end
 
 end
