@@ -10,4 +10,13 @@ class User < ApplicationRecord
   }
   
   validates :password, length: { minimum: 6 }
+
+  before_save :downcase_attributes
+
+  private
+
+  def downcase_attributes
+    self.email = email.downcase
+    self.username = username.downcase
+  end
 end
