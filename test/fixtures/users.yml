@@ -3,14 +3,14 @@
 juan:
   email: juan@gmail.com
   username: juan1
-  password_digest: MyString <%= BCrypt::Password.create('secure', cost:5) %>
+  password_digest: <%= BCrypt::Password.create('secure', cost:5) %>
 
 pedro: 
   email: pedro@gmail.com
   username: pedro2
-  password_digest: MyString <%= BCrypt::Password.create('secure', cost:5) %>
+  password_digest: <%= BCrypt::Password.create('secure', cost:5) %>
 
 carlos:
   email: carlos@gmail.com
   username: carlos3
-  password_digest: MyString <%= BCrypt::Password.create('secure', cost:5) %>
+  password_digest: <%= BCrypt::Password.create('secure', cost:5) %>
