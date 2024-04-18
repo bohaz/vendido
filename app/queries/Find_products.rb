@@ -10,6 +10,7 @@ class FindProducts
   scoped = filter_by_min_price(scoped, params[:min_price])
   scoped = filter_by_max_price(scoped, params[:max_price])
   scoped = filter_by_query_text(scoped, params[:query_text])
+  sort(scoped, params[:order_by])
   end
 
   private
@@ -27,21 +28,24 @@ class FindProducts
   def filter_by_min_price(scoped, min_price)
     return scoped unless min_price
   
-    scoped.where("price >= ?", params[:min_price])
+    scoped.where("price >= ?", min_price)
   end
 
   def filter_by_max_price(scoped, max_price)
     return scoped unless max_price
   
-    scoped.where("price <= ?", params[:max_price])
+    scoped.where("price <= ?", max_price)
   end
 
   def filter_by_query_text(scoped, query_text)
     return scoped unless query_text
   
-    scoped.search_full_text(params[:query_text])
+    scoped.search_full_text(query_text)
+  end
+
+  def sort(scoped, order_by)
+    order_by_query = Product::ORDER_BY.fetch(params[:order_by]&.to_sym, Product::ORDER_BY[:newest])
+    scoped.order(order_by_query)
   end
 
 end
-
-FindProducts.new.call({min_price: 400, max_price: 1000, query_text: 'iPhone'})
