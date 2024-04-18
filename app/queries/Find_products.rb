@@ -7,6 +7,7 @@ class FindProducts
   def call(params = {})
   scoped = products
   scoped = filter_by_category(scoped, params[:category_id])
+  scoped = filter_by_min_price(scoped, params[:min_price])
   end
 
   private
@@ -15,7 +16,7 @@ class FindProducts
     Product.with_attached_photo
   end
 
-  filter_by_category(scoped, category_id)
+  filter_by_category_id(scoped, category_id)
   return scoped unless category_id
 
   scoped.where(category_id: category_id)
