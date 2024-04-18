@@ -37,7 +37,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_select '.product', 12
-    assert_select '.products .product:first-child h2', 'Seat Panda clásico'
+    assert_select '.products .product:first-child h2', "Seat Panda clásico"
   end
 
   test 'sort products by cheapest prices first' do
@@ -45,7 +45,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_select '.product', 12
-    assert_select '.products .product:first-child h2', 'El hobbit'
+    assert_select '.products .product:first-child h2', "El hobbit"
   end
 
   test 'render a detailed product page' do
