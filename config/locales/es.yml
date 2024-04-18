@@ -22,6 +22,8 @@ es:
             blank: 'No puede estar vacío'
   common:
     confirm: '¿Estás seguro?'
+    back: 'Volver'
+    not_loged_in: 'Necesitas iniciar sesión para hacer eso'
   products:
     edit:
       title: 'Editar Producto'
