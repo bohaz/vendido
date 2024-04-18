@@ -1,4 +1,6 @@
 en:
+  app_name: 'Sold'
+  meta_title: 'Buy and sell anything you want'
   activerecord:
     models:
       product: 'Product'
