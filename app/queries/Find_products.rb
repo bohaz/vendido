@@ -16,10 +16,18 @@ class FindProducts
     Product.with_attached_photo
   end
 
-  filter_by_category_id(scoped, category_id)
+  def filter_by_category_id(scoped, category_id)
   return scoped unless category_id
 
   scoped.where(category_id: category_id)
+  end
+
+  def filter_by_min_price(scoped, min_price)
+    return scoped unless min_price
+  
+    scoped.where("price >= ?", params[:min_price])
+  end
+
 end
 
 FindProducts.new.call({min_price: 400, max_price: 1000, query_text: 'iPhone'})
