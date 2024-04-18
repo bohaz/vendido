@@ -6,6 +6,7 @@ class Authentication::SessionsController < ApplicationController
     @user = User.find_by(email: params[:login]) || User.find_by(username: params[:login])
 
     if @user&.authenticate(params[:password]) 
+      session[:user_id] = @user.id
       redirect_to products_path, notice: t('.created')
 
     else
@@ -13,10 +14,3 @@ class Authentication::SessionsController < ApplicationController
     end
 
   end
-
-  # private
-
-  # def user_params
-  #  params.require(:user).permit(:email, :username, :password)
-  # end
-end
