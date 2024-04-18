@@ -24,6 +24,7 @@ en:
   common:
     confirm: 'Are you sure?'
     back: 'Go Back'
+    not_loged_in: 'You need to be logged in to do that'
   products:
     edit:
       title: 'Edit Product'
@@ -60,3 +61,11 @@ en:
       updated: 'Category updated successfully'
     destroy:
       destroyed: 'Category deleted successfully'
+  authentication:    
+    users:
+      create:
+        created: 'User created successfully'
+      sessions:
+        create:
+          created: 'User logged in successfully'
+          failed: 'Invalid email or password'
