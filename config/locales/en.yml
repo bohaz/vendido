@@ -24,6 +24,7 @@ en:
   common:
     confirm: 'Are you sure?'
     back: 'Go Back'
+    not_loged_in: 'You need to be logged in to do that'
   products:
     edit:
       title: 'Edit Product'
