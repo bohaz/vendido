@@ -58,3 +58,7 @@ es:
       updated: 'Categoría actualizada correctamente'
     destroy:
       destroyed: 'Categoría eliminada correctamente'
+  authentication:    
+    users:
+      create:
+        created: 'Tu cuenta se ha creado correctamente'
