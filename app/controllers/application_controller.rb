@@ -21,6 +21,6 @@ class ApplicationController < ActionController::Base
   end
 
   def protect_pages
-    redirect_to new_sessions_path unless Current.user
+    redirect_to new_session_path, alert: t('common.not_loged_in') unless Current.user
   end
 end
