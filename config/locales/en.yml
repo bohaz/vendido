@@ -64,3 +64,7 @@ en:
     users:
       create:
         created: 'User created successfully'
+      sessions:
+        create:
+          created: 'User logged in successfully'
+          failed: 'Invalid email or password'
