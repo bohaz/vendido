@@ -4,12 +4,19 @@ es:
   activerecord:
     models:
       product: 'Producto'
+      user: 'Usuario'
+      category: 'Categoría'
     attributes:
       product:
         title: 'Nombre'
         description: 'Descripción'
         price: 'Precio'
         photo: 'Foto'
+      users:
+        email: 'Correo Electrónico'
+        password: 'Contraseña'
+      category:
+        name: 'Nombre'
   errors:
     models:
       product:
@@ -24,6 +31,21 @@ es:
     confirm: '¿Estás seguro?'
     back: 'Volver'
     not_loged_in: 'Necesitas iniciar sesión para hacer eso'
+  shared:
+    header:
+      add: 'Añadir Producto'
+      login: 'Iniciar Sesión'
+      logout: 'Cerrar Sesión'
+  authentication:    
+    users:
+      create:
+        created: 'Tu cuenta se ha creado correctamente'
+    sessions:
+      create:
+        created: 'Has iniciado sesión correctamente'
+        failed: 'Email o contraseña incorrectos'
+      destroy:
+        destroyed: 'Has cerrado sesión correctamente'
   products:
     edit:
       title: 'Editar Producto'
@@ -60,11 +82,4 @@ es:
       updated: 'Categoría actualizada correctamente'
     destroy:
       destroyed: 'Categoría eliminada correctamente'
-  authentication:    
-    users:
-      create:
-        created: 'Tu cuenta se ha creado correctamente'
-      sessions:
-        create:
-          created: 'Has iniciado sesión correctamente'
-          failed: 'Email o contraseña incorrectos'
+ 

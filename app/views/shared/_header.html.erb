@@ -2,5 +2,9 @@
   <h1><%= t('app_name') %></h1>
 <% end %>
 
-<%= link_to t('.add'), new_product_path %>
-<%= link_to t('.categories'), categories_path %>
+<%= link_to t('.add'), new_product_path if Current.user %>
+<%= link_to t('.categories'), categories_path if Current.user %>
+<%= link_to t('.login'), new_session_path unless Current.user %>
+<%= link_to t('.register'), new_user_path unless Current.user %>
+<%= button_to t('.logout'), session_path(Current.user.id), method: :delete, data: 
+{ turbo_confirm: t('common.confirm') } if Current.user %>
