@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+  namespace :authentication, path: '', as: ''  do
+    resources :users, only: [:new, :create], path: '/register', path_names: { new: '/' }
+    resources :sessions, only: [:new, :create, :destroy], path: '/login', path_names: { new: '/' }
+  end
+
   resources :categories, exept: :show
   resources :products, path: '/'
-
-  namespace :authentication, path: '', as: ''  do
-    resources :users, only: [:new, :create]
-    resources :sessions, only: [:new, :create, :destroy]
-  end
 end
