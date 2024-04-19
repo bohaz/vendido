@@ -4,12 +4,19 @@ en:
   activerecord:
     models:
       product: 'Product'
+      user: 'User'
+      category: 'Category'
     attributes:
       product:
         title: 'Title'
         description: 'Description'
         price: 'Price'
         photo: 'Photo'
+      user:
+        email: 'Email'
+        password: 'Password'
+      category:
+        name: 'Name'
 
   errors:
     models:
@@ -25,6 +32,22 @@ en:
     confirm: 'Are you sure?'
     back: 'Go Back'
     not_loged_in: 'You need to be logged in to do that'
+  shared:
+  header:
+    add: 'Add Product'
+    login: 'Login'
+    logout: 'Logout'
+  authentication:    
+    users:
+      create:
+        created: 'User created successfully'
+        failed: 'User could not be created'
+    sessions:
+      create:
+        created: 'User logged in successfully'
+        failed: 'Invalid email or password'
+      destroy:
+        destroyed: 'User logged out successfully'
   products:
     edit:
       title: 'Edit Product'
@@ -61,12 +84,3 @@ en:
       updated: 'Category updated successfully'
     destroy:
       destroyed: 'Category deleted successfully'
-  authentication:    
-    users:
-      create:
-        created: 'User created successfully'
-        failed: 'User could not be created'
-      sessions:
-        create:
-          created: 'User logged in successfully'
-          failed: 'Invalid email or password'
