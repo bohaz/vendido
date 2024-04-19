@@ -65,6 +65,7 @@ en:
     users:
       create:
         created: 'User created successfully'
+        failed: 'User could not be created'
       sessions:
         create:
           created: 'User logged in successfully'
