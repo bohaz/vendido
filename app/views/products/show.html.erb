@@ -4,6 +4,7 @@
 <p class="description"> <%= @product.description %> </p>
 <p class="price"> <%= @product.price %>$</p>
 
-<%= link_to t('.edit'), edit_product_path(@product) %> |
-<%= button_to t('.delete'), product_path(@product), method: :delete, data: { turbo_confirm: t('common.confirm') } %>
+<%= link_to t('.edit'), edit_product_path(@product) if @product.user == Current.user %> 
+<%= button_to t('.delete'), product_path(@product), method: :delete, data: 
+{ turbo_confirm: t('common.confirm') } %>
 
