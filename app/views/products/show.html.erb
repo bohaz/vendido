@@ -6,5 +6,5 @@
 
 <%= link_to t('.edit'), edit_product_path(@product) if @product.user == Current.user %> 
 <%= button_to t('.delete'), product_path(@product), method: :delete, data: 
-{ turbo_confirm: t('common.confirm') } %>
+{ turbo_confirm: t('common.confirm') } if @product.user == Current.user %>
 
