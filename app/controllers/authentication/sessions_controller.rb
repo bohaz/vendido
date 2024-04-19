@@ -12,7 +12,7 @@ class Authentication::SessionsController < ApplicationController
       redirect_to products_path, notice: t('.created')
 
     else
-      redirect_to new_sessions_path, alert: t('.failed')
+      redirect_to new_session_path, alert: t('.failed')
     end
   end
 
