@@ -27,4 +27,5 @@ class ApplicationController < ActionController::Base
   def authorize! product
     is_allowed = product.user_id == Current.user.id
     redirect_to products_path, alert: t('common.not_authorized') unless is_allowed
+  end
 end
