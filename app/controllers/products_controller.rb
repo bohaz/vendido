@@ -40,6 +40,7 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    authorize! @product
     @product = Product.find(params[:id])
     @product.destroy
     redirect_to products_path, notice: t('.destroyed'), status: :see_other
