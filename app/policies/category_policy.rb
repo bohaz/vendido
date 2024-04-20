@@ -1,4 +1,4 @@
-class CategoryPolicy
+class CategoryPolicy < BasePolicy
   def index
     Current.user.admin?
   end
