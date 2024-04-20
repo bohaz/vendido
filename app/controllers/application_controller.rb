@@ -23,4 +23,8 @@ class ApplicationController < ActionController::Base
   def protect_pages
     redirect_to new_session_path, alert: t('common.not_loged_in') unless Current.user
   end
+
+  def authorize! product
+    is_allowed = product.user_id == Current.user.id
+    redirect_to products_path, alert: t('common.not_authorized') unless is_allowed
 end
