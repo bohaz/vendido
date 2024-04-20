@@ -1,13 +1,13 @@
-class ProductPilicy
-  def edit?
+class ProductPolicy < BasePolicy
+  def edit
     record.user_id == Current.user.id
   end
 
-  def update?
+  def update
     record.user_id == Current.user.id
   end
   
-  def destroy?
+  def destroy
     record.user_id == Current.user.id
   end
 end
