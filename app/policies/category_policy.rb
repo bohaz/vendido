@@ -10,4 +10,8 @@ class CategoryPolicy
   def create
     Current.user.admin?
   end
+
+  def edit
+    Current.user.admin?
+  end
 end
