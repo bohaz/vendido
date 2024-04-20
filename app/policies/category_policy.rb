@@ -14,4 +14,8 @@ class CategoryPolicy
   def edit
     Current.user.admin?
   end
+
+  def update
+    Current.user.admin?
+  end
 end
