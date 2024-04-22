@@ -8,6 +8,6 @@ class FavoritesController < ApplicationController
   private
 
   def product
-    Product.find(params[:product_id])
+    @product ||= Product.find(params[:product_id])
   end
 end

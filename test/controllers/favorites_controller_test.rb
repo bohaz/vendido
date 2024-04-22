@@ -2,7 +2,7 @@ require "test_helper"
 
 class FavoritesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    login
+   login 
     @product = products(:megadrive)
   end
 
