@@ -31,6 +31,7 @@ es:
     confirm: '¿Estás seguro?'
     back: 'Volver'
     not_loged_in: 'Necesitas iniciar sesión para hacer eso'
+    not_authorized: 'No estás autorizado para hacer eso'
   shared:
     header:
       add: 'Añadir Producto'
