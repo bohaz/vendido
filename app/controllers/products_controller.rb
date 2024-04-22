@@ -30,8 +30,8 @@ class ProductsController < ApplicationController
   end
 
   def update
-    authorize! @product
     @product = Product.find(params[:id])
+    authorize! @product
     if @product.update(product_params)
       redirect_to products_path, notice: t('.updated')
     else
@@ -40,8 +40,8 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    authorize! @product
     @product = Product.find(params[:id])
+    authorize! @product
     @product.destroy
     redirect_to products_path, notice: t('.destroyed'), status: :see_other
   end
