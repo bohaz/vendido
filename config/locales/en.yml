@@ -33,6 +33,7 @@ en:
     back: 'Go Back'
     not_loged_in: 'You need to be logged in to do that'
     not_authorized: 'You are not authorized to do that'
+    not_found: 'Not Found'
   shared:
   header:
     add: 'Add Product'
@@ -63,6 +64,10 @@ en:
       expensive: 'Expensive First'
       cheapest: 'Cheapest First'
       newest: 'Recently Added'
+    show:
+      edit: ' Edit Product'
+      delete: 'Delete Product'
+      view_more_products: 'View more products by %{username}'
     create:
       created: 'Product created successfully'
     update:
