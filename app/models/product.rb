@@ -15,6 +15,7 @@ class Product < ApplicationRecord
   validates :title, :description, :price, presence: true
   validates :price, numericality: { greater_than_or_equal_to: 0 }
   
+  has_many :favorites, dependent: :destroy
   belongs_to :category
   belongs_to :user, default: -> { Current.user }
 
