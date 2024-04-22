@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  user: one
-  product: one
+juan_switch:
+  user: juan
+  product: switch
 
-two:
-  user: two
-  product: two
+pedro_driver:
+  user: pedro
+  product: driver
