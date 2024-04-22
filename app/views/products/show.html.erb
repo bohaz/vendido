@@ -10,6 +10,8 @@
 
 <%= link_to t('.view_more_products', username: @product.user.username), user_path(@product.user.username) %>
 
-<%= button_to '♥️', favorites_path(product_id: @product.id), method: :post, data: 
-{} %>
-
+<% if @product.favorites.find_by(user: Current.user) %>
+  <%= button_to '💔', favorite_path(@product.id), method: :delete, data: {} %>
+<% else %>
+  <%= button_to '♥️', favorites_path(product_id: @product.id), method: :post, data: {} %>
+<% end %>
