@@ -32,6 +32,7 @@ es:
     back: 'Volver'
     not_loged_in: 'Necesitas iniciar sesión para hacer eso'
     not_authorized: 'No estás autorizado para hacer eso'
+    not_found: 'No se ha encontrado'
   shared:
     header:
       add: 'Añadir Producto'
@@ -61,6 +62,10 @@ es:
       expensive: 'Más caros primero'
       cheapest: 'Más baratos primero'
       newest: 'Recién añadidos'
+    show:
+      edit: 'Editar Producto'
+      delete: 'Eliminar Producto'
+      view_more_products: 'Ver más productos de %{username}'
     create:
       created: 'Tu producto se ha creado correctamente'
     update:

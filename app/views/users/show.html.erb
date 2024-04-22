@@ -1,0 +1,19 @@
+<%= @user.username %>
+
+<%= turbo_frame_tag "products", class: 'products' do %>
+  <%= render partial: 'products/product', collection: @products %>
+
+  <div class="pagination-buttons">
+    <% if @pagy.prev %>
+      <%= link_to 'Previous', pagy_url_for(@pagy, @pagy.prev), 
+            data: { turbo_frame: "products" }, 
+            class: 'previous-button' %>
+    <% end %>
+
+    <% if @pagy.next %>
+      <%= link_to 'Next', pagy_url_for(@pagy, @pagy.next), 
+            data: { turbo_frame: "products" }, 
+            class: 'next-button' %>
+    <% end %>
+  </div>
+<% end %>
