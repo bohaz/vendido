@@ -5,8 +5,8 @@ class CreateFavorites < ActiveRecord::Migration[7.0]
       t.references :product, null: false, foreign_key: true
 
       t.timestamps
-
-      add_index :favorites, [:user_id, :product_id], unique: true
     end
+
+    add_index :favorites, [:user_id, :product_id], unique: true
   end
 end
