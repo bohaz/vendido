@@ -35,10 +35,11 @@ en:
     not_authorized: 'You are not authorized to do that'
     not_found: 'Not Found'
   shared:
-  header:
-    add: 'Add Product'
-    login: 'Login'
-    logout: 'Logout'
+    header:
+      add: 'Add Product'
+      login: 'Login'
+      logout: 'Logout'
+      favorites: 'My Favorites'
   authentication:    
     users:
       create:
@@ -90,3 +91,6 @@ en:
       updated: 'Category updated successfully'
     destroy:
       destroyed: 'Category deleted successfully'
+favorites:
+  index:
+    title: 'My Favorites'
