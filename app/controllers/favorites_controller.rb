@@ -1,4 +1,7 @@
 class FavoritesController < ApplicationController
+  def index
+    @products = FindProducts.new(Product.all).call(favorites: true)
+  end
 
   def create
     product.favorite!
