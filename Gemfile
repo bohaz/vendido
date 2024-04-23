@@ -18,6 +18,9 @@ gem "pg_search", "~> 2.3"
 # Pagination
 gem 'pagy', '~> 5.10.1'
 
+# Styles with Tailwind CSS 
+gem 'tailwindcss-rails'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
