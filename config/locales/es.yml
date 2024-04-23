@@ -38,6 +38,7 @@ es:
       add: 'Añadir Producto'
       login: 'Iniciar Sesión'
       logout: 'Cerrar Sesión'
+      favorites: 'Mis Favoritos'
   authentication:    
     users:
       create:
@@ -88,4 +89,6 @@ es:
       updated: 'Categoría actualizada correctamente'
     destroy:
       destroyed: 'Categoría eliminada correctamente'
- 
+favorites:
+  index:
+    title: 'Mis Favoritos'
