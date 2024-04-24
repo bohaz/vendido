@@ -4,11 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["items"]
 
-  open() {
-    this.itemsTarget.classList.remove("translate-x-full")
-    console.log("conectado")
-  }
-
-  close() {
+  toggle() {
+    this.itemsTarget.classList.toggle("translate-x-full")
   }
 }
