@@ -1,10 +1,12 @@
 <%= turbo_frame_tag "modal" do %>
   <div>
-    <div class="">
-
-      <h2><%= t('.title') %></h2>
+    <div class="fixed z-10 w-ful top-0 left-0 bg-block bg-opacity-40"></div>
     
-    </div>
+      <div class="">
+      
+        <h2><%= t('.title') %></h2>
+      
+      </div>
 
     <%= render 'form' %>
   </div>
