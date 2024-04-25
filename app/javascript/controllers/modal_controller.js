@@ -10,6 +10,9 @@ export default class extends Controller {
     this.sidebarTarget.classList.remove("translate-x-0")
     this.sidebarTarget.classList.add("translate-x-full")
 
-    this.element.remove()
+    setTimeout(() => {
+      this.element.remove()
+    }
+    , 500)
   }
 }
