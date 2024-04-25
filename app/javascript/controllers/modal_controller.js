@@ -9,6 +9,8 @@ export default class extends Controller {
   close() {
     this.sidebarTarget.classList.remove("translate-x-0")
     this.sidebarTarget.classList.add("translate-x-full")
+
+    this.element.remove()
  console.log("close")
   }
 }
