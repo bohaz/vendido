@@ -5,4 +5,16 @@ class CategoryComponent < ViewComponent::Base
     @category = category
   end
 
+  def title
+    t('.all')
+  end
+
+  def link
+    products_path
+  end
+
+  def classes
+    "bg-white text-gray-600 px-4 py-2 rounded-2xl drop-shadow-sm hover:bg-gray-300"
+  end
+
 end
