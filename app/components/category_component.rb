@@ -10,7 +10,7 @@ class CategoryComponent < ViewComponent::Base
   end
 
   def link
-    products_path
+    @category ? products_path(category_id: @category.id) : products_path
   end
 
   def classes
