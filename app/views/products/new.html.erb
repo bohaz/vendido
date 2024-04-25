@@ -2,7 +2,7 @@
   <div data-controller="modal">
     <div data-action="click->modal#close" class="fixed z-10 w-full h-full top-0 left-0 bg-black bg-opacity-40"></div>
       
-    <div data-modal-target="sidebar" class="fixed top-0 right-0 z-20 w-1/2 sm:w-3/6 lg:w-2/6 h-full bg-white overflow-y-scroll shadow flex flex-col easy-in-out duration-300 p-5 translate-x-0">
+    <div data-modal-target="sidebar" class="fixed top-0 right-0 z-20 w-1/2 sm:w-3/6 lg:w-2/6 h-full bg-white overflow-y-scroll shadow flex flex-col easy-in-out duration-300 p-5 translate-x-full">
       <p data-action="click->modal#close">❌</p>
       <h2><%= t('.title') %></h2>
       <%= render 'form' %>
