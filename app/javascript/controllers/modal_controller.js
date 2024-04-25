@@ -11,6 +11,5 @@ export default class extends Controller {
     this.sidebarTarget.classList.add("translate-x-full")
 
     this.element.remove()
- console.log("close")
   }
 }
