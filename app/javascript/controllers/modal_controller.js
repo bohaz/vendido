@@ -15,6 +15,7 @@ export default class extends Controller {
     this.sidebarTarget.classList.add("translate-x-full")
 
     setTimeout(() => {
+      this.element.parentElement.removeAttribute("src")
       this.element.remove()
     }
     , 250)
