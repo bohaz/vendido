@@ -22,8 +22,7 @@
 
     <div class="flex overflow-x-scroll gap-2 my-4">
       <%= render(CategoryComponent.new) %>
-
-      <%= render partial: 'category', collection: @categories %>
+      <%= render(CategoryComponent.with_collection(@categories)) %>
     </div>
 
     <%= turbo_frame_tag :products, class: "flex flex-col m-2" do %>
