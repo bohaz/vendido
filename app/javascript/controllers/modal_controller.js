@@ -1,13 +1,14 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["modal"]
+  static targets = ["sidebar"]
   connect() {
  
   }
 
   close() {
-    this.modalTarget.classList.remove("translate-x-0")
+    this.sidebarTarget.classList.remove("translate-x-0")
+    this.sidebarTarget.classList.add("translate-x-full")
  console.log("close")
   }
 }
