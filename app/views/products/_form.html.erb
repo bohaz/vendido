@@ -18,8 +18,7 @@
   </div>
 
   <div>
-  <%= form.label :category_id %><br>
-  <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name %>
+    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, { prompt: t(".category_placeholder") }, { class: "rounded-2xl border-gray-200 mb-4 w-full text-gray-500"} %>
   </div>
 
   <div>
