@@ -6,8 +6,7 @@
   <% end %>
   
   <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, placeholder: t(".title_placeholder"), class: "rounded-2xl border-gray-200 mb-4 w-full" %>
   </div>
   
   <div>
