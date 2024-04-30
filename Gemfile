@@ -82,3 +82,5 @@ group :test do
   gem "webdrivers"
   gem "webmock"
 end
+
+gem "sidekiq", "~> 7.2"
