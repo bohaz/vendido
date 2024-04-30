@@ -13,7 +13,7 @@ class User < ApplicationRecord
     message: :invalid
   }
   
-  validates :password, length: { minimum: 6 }
+  validates :password, length: { minimum: 6 }, if: :password_digest_changed?
 
   has_many :products, dependent: :destroy
   has_many :favorites, dependent: :destroy
