@@ -98,3 +98,6 @@ es:
 favorites:
   index:
     title: 'Mis Favoritos'
+user_mailer:
+  welcome:
+    welcome_message: 'Hey %{username}, bienvenido a Vendido! Esperamos que vendas muchisimo!'
