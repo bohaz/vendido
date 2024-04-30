@@ -102,4 +102,5 @@ favorites:
     title: 'My Favorites'
 user_mailer:
   welcome:
+    subject: 'Welcome to Sold!'
     welcome_message: 'Hey %{username}, Welcome to Sold! We hope you sell a lot!'
