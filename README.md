@@ -32,6 +32,8 @@
 
 **Vendido** This is a full-stack application developed using Ruby on Rails. It offers users a platform where they can buy or sell items effortlessly through an intuitive and user-friendly interface.
 
+![alt text](<Captura de pantalla (231).png>)  ![alt text](<Captura de pantalla (232).png>)
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
