@@ -15,6 +15,7 @@ class FetchCountryService
     parsed_response.dig("countryCode").downcase
     else
       nil
+    end
   rescue
     nil
   end
