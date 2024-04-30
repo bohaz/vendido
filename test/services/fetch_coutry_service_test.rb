@@ -2,7 +2,7 @@ require "test_helper"
 
 class FetchCountryServiceTest < ActiveSupport::TestCase
   test "it should return ca with a valid ip" do
-    stub_request(:get, "http://ip-api.com/json/24.48.0.1").
+    stub_request(:get, "http://ip-api.com/json/127.0.0.1").
       to_return(status: 200, body: {
         status: "success",
         countryCode: "CA"
