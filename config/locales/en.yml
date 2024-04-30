@@ -100,3 +100,6 @@ en:
 favorites:
   index:
     title: 'My Favorites'
+user_mailer:
+  welcome:
+    welcome_message: 'Hey %{username}, Welcome to Sold! We hope you sell a lot!'
