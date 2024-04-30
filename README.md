@@ -7,7 +7,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Petfashion_api ](#-Vendido-)
+- [💸 Vendido ](#-Vendido-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -57,6 +57,8 @@
 - [x] **Stimulus Js**
 - [x] **Postgres Database**
 - [x] **Git Version Control**
+- [x] **Redis**
+- [x] **Sidekiq**
 - [x] **Interactive User Interface**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -84,7 +86,7 @@ git clone https://github.com/bohaz/vendido.git
 
 Install this project with the steps below:
 
-- After cloning, type `cd petfashion_api` to access the project on the terminal.
+- After cloning, type `cd vendido` to access the project on the terminal.
 - Run `bundle install` to install all the required dependancies.
 - For developmente environment:
   - Create Database with `rails db:create RAILS_ENV=development`
@@ -107,8 +109,7 @@ Then migrate the database by executing the following commands:
 
 To run the project, execute the following command:
 - Run `rails s` to start a development server (it will run in port 3000)
-- Now, you are ready to consume the API endpoints
-
+- Now, you are ready to use the App!
 
 
 ## 👥 Author <a name="authors"></a>
