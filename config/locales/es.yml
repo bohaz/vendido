@@ -100,4 +100,5 @@ favorites:
     title: 'Mis Favoritos'
 user_mailer:
   welcome:
+    subject: 'Bienvenido a Vendido'
     welcome_message: 'Hey %{username}, bienvenido a Vendido! Esperamos que vendas muchisimo!'
