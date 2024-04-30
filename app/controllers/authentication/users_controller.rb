@@ -9,7 +9,7 @@ class Authentication::UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      UserMailer.welcome.deliver_later
+      UserMailer.with(user: @user).welcome.deliver_later
       session[:user_id] = @user.id
       redirect_to products_path, notice: t('.created')
     else
