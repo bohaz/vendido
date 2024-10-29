@@ -59,13 +59,14 @@ class FindProducts
   def sort(scoped, order_by)
     case order_by
     when 'expensive'
-      scoped.order(price: :desc)
+      scoped.order(Product::ORDER_BY[:expensive])
     when 'cheapest'
-      scoped.order(price: :asc)
+      scoped.order(Product::ORDER_BY[:cheapest])
     else
-      scoped.order(created_at: :desc) 
+      scoped.order(Product::ORDER_BY[:newest])
     end
   end
+  
   
 
 end

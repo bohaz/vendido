@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   skip_before_action :protect_pages, only: %i[index show]
   
   def index
+    puts params[:order_by]
     @categories = Category.all.order(name: :asc).load_async
     
     @pagy, @products = pagy_countless(FindProducts.new.call(product_params_index).load_async, items: 12)
